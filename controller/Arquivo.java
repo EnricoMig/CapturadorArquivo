@@ -26,14 +26,9 @@ public class Arquivo {
 
     public static void exibir(){
         Leitor l = new Leitor();
-        Timer t = new Timer();
-        Mark m = new Mark();
-
+        Clear c = new Clear();
         
-        for(int x=0;x<=100;x++){
-            t.time(10);
-            m.marca("");
-        }
+        c.clean(100);
         System.out.println(l.armazem());
        
     }

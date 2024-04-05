@@ -39,6 +39,7 @@ public class Leitor {
         String linha;
         int count = 0;
         BufferedReader procura = procurador();
+        Clear clean = new Clear();
         
         try {
             while ((linha = procura.readLine()) != null) {
@@ -48,21 +49,26 @@ public class Leitor {
             e.printStackTrace();
         }
 
+        
         System.out.println("linhas:"+count);
+        clean.clean(100);
         return count;
     }
 
     public static String armazem(){
         Porc p = new Porc();
         Timer t = new Timer();
-        
+        Clear clean = new Clear();
+
         BufferedReader procura = procurador();
         int contado = contador();
+        
         int x=0;
         String linha;
         String musica="";
-
+    
        try {
+            clean.clean(100);
             while ((linha = procura.readLine()) != null) {
                 musica += linha+"\n";
                 Timer.time(500);
@@ -70,6 +76,7 @@ public class Leitor {
                 x++;
             }
             System.out.println("Texto Lido!");
+            t.time(500);
             return musica;
        } catch (Exception e) {
             System.out.println("\n\n\n\nNão entrou na gravação da musica\n\n\n\n");
