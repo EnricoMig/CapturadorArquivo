@@ -4,21 +4,30 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.Scanner;
+import modal.*;
 
 public class Arquivo {
     public static String entrada() {
+        String nome;
+        Scanner input= new Scanner(System.in);
+        System.out.println("Qual o nome do Arquivo?");
+        return nome = input.nextLine();
+    }
+
+    public static String tipo(){
         Scanner input = new Scanner(System.in);
-        System.out.print("Digite o nome do arquivo: "); String nome = input.nextLine();
-        input.close();
-        return nome;
+        String tipo = ".";
+        System.out.println("Qual a extensão do arquivo?"); tipo += input.next();       
+        return tipo;
     }
 
     public static String captura() {
+        String extensao = tipo();
         String nome = entrada();
         String musica = "";
 
         try {
-            FileReader arq = new FileReader(nome+".txt");
+            FileReader arq = new FileReader(nome+extensao);
             BufferedReader lerArq = new BufferedReader(arq);
 
             String linha;
