@@ -1,15 +1,11 @@
-
+package controller;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.Scanner;
-import java.util.regex.Pattern;
-import java.util.regex.Matcher;
 
-
-public class prog {
-
+public class Arquivo {
     public static String entrada() {
         Scanner input = new Scanner(System.in);
         System.out.print("Digite o nome do arquivo: "); String nome = input.nextLine();
@@ -48,17 +44,5 @@ public class prog {
     public static void exibir(){
         System.out.println(captura());
        
-    }
-   
-    public static void Testerenex(){
-        String musica = captura();
-        Pattern padrao = Pattern.compile("sorriso");
-        Matcher pesquisa = padrao.matcher(captura());
-        System.out.print("Resultado: " +pesquisa.matches());
-    }
-        
-    public static void main(String[] args) {
-        exibir();
-        Testerenex();
     }
 }
