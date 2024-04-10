@@ -32,4 +32,6 @@ public class Arquivo {
         System.out.println(l.armazem());
        
     }
+
+    
 }

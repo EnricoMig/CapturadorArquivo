@@ -71,12 +71,12 @@ public class Leitor {
             clean.clean(100);
             while ((linha = procura.readLine()) != null) {
                 musica += linha+"\n";
-                Timer.time(500);
+                //Timer.time(500);
                 System.out.println("Lendo: "+p.porcentagem(x, contado)+"%");
                 x++;
             }
             System.out.println("Texto Lido!");
-            t.time(500);
+            t.time(10);
             return musica;
        } catch (Exception e) {
             System.out.println("\n\n\n\nNão entrou na gravação da musica\n\n\n\n");
