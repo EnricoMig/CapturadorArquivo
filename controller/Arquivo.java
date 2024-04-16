@@ -2,27 +2,26 @@ package controller;
 
 import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.Scanner;
+
+import javax.swing.text.Document;
+import javax.swing.text.html.ParagraphView;
+
+
+
 import modal.*;
 import controller.Timer;
 
 public class Arquivo {
 
-    public static String nome() {
-        String nome="";
-        Scanner input= new Scanner(System.in);
-        System.out.println("Qual o nome do Arquivo?");
-        return nome = input.nextLine();
-    }
+    public static String nome(String nome){ return nome; }
 
-    public static String tipo(){
-        Scanner input = new Scanner(System.in);
-        String tipo = ".";
-        System.out.println("Qual a extensão do arquivo?"); tipo += input.next();       
-        return tipo;
-    }
+    public static String tipo(String tipo){ return tipo; }
+
+    public static String docName(String doc){ return doc; }
 
     public static void exibir(){
         Leitor l = new Leitor();
@@ -33,5 +32,10 @@ public class Arquivo {
        
     }
 
-    
+    public static void documento(){
+       
+
+
+    }
+
 }

@@ -13,7 +13,7 @@ public class Leitor {
         Timer t = new Timer();
 
    
-        File arquivo = new File(cam,ar.nome()+ar.tipo());
+        File arquivo = new File(cam,ar.nome("erva venenosa")+ar.tipo(".txt"));
 
         return arquivo;
     }

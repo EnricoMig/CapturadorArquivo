@@ -11,7 +11,7 @@ public class prog {
 
         Arquivo a = new Arquivo();
         
-        a.exibir();
+        a.documento();
         
     }
 }
